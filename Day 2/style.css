@@ -1,0 +1,307 @@
+/* ==========================================================================
+   ১. সাধারণ রিসেট ও ভেরিয়েবল (Compact Reset)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --bg-light: #f8fafc;
+}
+
+html {
+    scroll-behavior: smooth; /* স্মুথ স্ক্রলিং */
+}
+
+body {
+    color: var(--dark);
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 70px 0;
+    scroll-margin-top: 70px; /* ন্যাভবারে ক্লিক করলে যেন হেডিং ঢাকা না পড়ে */
+}
+
+/* ==========================================================================
+   ২. বাটন এবং সাধারণ টেক্সট স্টাইল
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
+
+.btn-sm {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+/* ==========================================================================
+   ৩. হেডার ও ন্যাভিগেশন বার (Navbar)
+   ========================================================================== */
+.header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    margin: 0 12px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   ৪. হিরো সেকশন (Hero)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* ==========================================================================
+   ৫. কোর্স কার্ড সেকশন (Courses)
+   ========================================================================== */
+.courses {
+    background-color: var(--bg-light);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.card-content h3 i {
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   ৬. কন্টাক্ট সেকশন (Contact Form)
+   ========================================================================== */
+.contact-box {
+    max-width: 550px;
+}
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-box input, 
+.contact-box textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.contact-box input:focus, 
+.contact-box textarea:focus {
+    border-color: var(--primary);
+}
+
+/* ==========================================================================
+   ৭. ফুটার ও রেসপনসিভ স্টাইল (Footer & Responsive)
+   ========================================================================== */
+.footer {
+    background: var(--dark);
+    color: #94a3b8;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials a {
+    color: #94a3b8;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
+    .nav-links {
+        display: none;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
