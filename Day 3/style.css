@@ -1,0 +1,586 @@
+
+/* ==================================================
+   1. ROOT VARIABLES
+   Website-এর common colors এখানে রাখা হয়েছে।
+   ================================================== */
+
+:root {
+    --primary: #168568;       /* Main green color */
+    --primary-dark: #106b54;  /* Dark green for hover */
+    --dark: #172b27;           /* Main heading color */
+    --text: #53645e;           /* Paragraph color */
+    --background: #f6f8f5;     /* Page background */
+    --white: #ffffff;          /* White background */
+    --border: #e3eae5;         /* Border color */
+    --soft-green: #e8f4ed;     /* Light green background */
+    --shadow: 0 12px 35px rgba(23, 43, 39, 0.07);
+}
+
+/* সব element-এর default margin ও padding reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling চালু */
+html {
+    scroll-behavior: smooth;
+}
+
+/* পুরো website-এর default design */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+/* সব link-এর underline সরানো */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* List-এর bullet সরানো */
+ul {
+    list-style: none;
+}
+
+/* Image container-এর বাইরে যাবে না */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Content-এর width ও center alignment */
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* ==================================================
+   2. NAVIGATION BAR
+   সব পেজের উপরের menu design।
+   ================================================== */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo ও navigation একই লাইনে রাখা */
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Website logo */
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Logo-এর dot-এর green color */
+.logo span {
+    color: var(--primary);
+}
+
+/* Navigation links-এর layout */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+/* Navigation link-এর default design */
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.25s;
+}
+
+/* Hover করলে ও active page-এর link green হবে */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* Contact button-এর আলাদা design */
+.nav-links .nav-contact {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+/* Contact button hover effect */
+.nav-links .nav-contact:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+/* ==================================================
+   3. HOME PAGE HERO SECTION
+   Home page-এর introduction area।
+   ================================================== */
+
+.hero {
+    min-height: 570px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+/* ছোট introductory badge */
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    background: var(--soft-green);
+    padding: 6px 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+/* Main heading-এর size ও spacing */
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+/* Heading-এর highlighted name */
+.hero h1 span {
+    color: var(--primary);
+}
+
+/* Hero paragraph */
+.hero p {
+    max-width: 540px;
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+/* Hero buttons পাশাপাশি রাখা */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* সব button-এর common style */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--primary);
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/* Primary button */
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Primary button hover */
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn-outline {
+    color: var(--primary);
+}
+
+/* Outline button hover */
+.btn-outline:hover {
+    background: var(--soft-green);
+}
+
+/* Hero image-এর design */
+.hero-image {
+    width: 100%;
+    max-width: 340px;
+    justify-self: center;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 170px 170px 24px 24px;
+    background: var(--soft-green);
+    box-shadow: var(--shadow);
+}
+
+/* ==================================================
+   4. COMMON SECTION STYLES
+   বিভিন্ন পেজের section ও heading design।
+   ================================================== */
+
+.section {
+    padding: 75px 0;
+}
+
+/* White background section */
+.section-white {
+    background: var(--white);
+}
+
+/* Section heading center-এ রাখা */
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* Section title */
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+/* Section description */
+.section-heading p {
+    color: var(--text);
+}
+
+/* About, Projects, Skills ও Contact page-এর title */
+.page-header {
+    padding: 75px 0 45px;
+    text-align: center;
+}
+
+/* Page title */
+.page-header h1 {
+    font-size: clamp(34px, 5vw, 48px);
+    margin-bottom: 12px;
+}
+
+/* Page description */
+.page-header p {
+    color: var(--text);
+}
+
+/* ==================================================
+   5. CARD AND GRID
+   Services ও projects-এর card design।
+   ================================================== */
+
+/* তিনটি card পাশাপাশি থাকবে */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Individual card design */
+.card {
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: 0.25s;
+}
+
+/* Hover করলে card একটু ওপরে উঠবে */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* Card icon-এর background ও alignment */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--soft-green);
+    color: var(--primary);
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+/* Card heading */
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Card paragraph */
+.card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* Project technology tags-এর layout */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+/* Individual technology tag */
+.project-tags span {
+    background: var(--soft-green);
+    color: var(--primary-dark);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Card-এর ভিতরের text link */
+.text-link {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ==================================================
+   6. ABOUT PAGE
+   About information ও personal details।
+   ================================================== */
+
+/* দুইটি content column */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+/* About paragraph */
+.about-layout p {
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+/* Personal information list */
+.info-list li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Information label-এর width */
+.info-list strong {
+    display: inline-block;
+    min-width: 110px;
+}
+
+/* ==================================================
+   7. SKILLS PAGE
+   Skill progress bar-এর design।
+   ================================================== */
+
+/* প্রতিটি skill-এর নিচে spacing */
+.skill-item {
+    margin-bottom: 23px;
+}
+
+/* Skill name ও percentage পাশাপাশি */
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Progress bar-এর background */
+.skill-track {
+    height: 9px;
+    border-radius: 20px;
+    background: #e4ebe6;
+    overflow: hidden;
+}
+
+/* Skill progress-এর green অংশ */
+.skill-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: inherit;
+}
+
+/* ==================================================
+   8. CONTACT PAGE
+   Contact details ও form-এর design।
+   ================================================== */
+
+/* Contact information এবং form পাশাপাশি */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Contact information ও form-এর common design */
+.contact-info,
+.contact-form {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+/* Contact information paragraph */
+.contact-info p {
+    color: var(--text);
+    margin: 14px 0;
+}
+
+/* Form label */
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Input ও textarea-এর common design */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+    background: #fcfdfc;
+}
+
+/* Input focus করলে green border */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Message লেখার area */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ==================================================
+   9. FOOTER
+   সব পেজের নিচের অংশ।
+   ================================================== */
+
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 25px 0;
+    text-align: center;
+}
+
+/* Footer text */
+.footer p {
+    color: #c5d2cc;
+    font-size: 13px;
+}
+
+/* ==================================================
+   10. RESPONSIVE DESIGN
+   Tablet ও mobile screen-এর জন্য।
+   ================================================== */
+
+/* 800px বা তার চেয়ে ছোট screen */
+@media (max-width: 800px) {
+
+    /* Navbar-এর logo ও menu vertical হবে */
+    .nav-inner {
+        padding: 15px 0;
+        flex-direction: column;
+    }
+
+    /* Menu links center-এ থাকবে */
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Hero section এক column হবে */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+
+    /* Hero paragraph center-এ থাকবে */
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Buttons center-এ থাকবে */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Mobile-এ hero image ছোট হবে */
+    .hero-image {
+        max-width: 260px;
+    }
+
+    /* Card দুই column-এ থাকবে */
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* About ও Contact এক column হবে */
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 520px বা তার চেয়ে ছোট mobile screen */
+@media (max-width: 520px) {
+
+    /* Card এক column-এ থাকবে */
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navigation spacing ছোট হবে */
+    .nav-links {
+        gap: 12px;
+    }
+
+    /* Mobile-এ link font ছোট হবে */
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* Mobile-এ section padding কমবে */
+    .section {
+        padding: 50px 0;
+    }
+
+    /* Heading-এর letter spacing কমবে */
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+}

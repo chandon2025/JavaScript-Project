@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Website responsive করার জন্য -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab-এর title -->
+    <title>Chandon | Portfolio</title>
+
+    <!-- External CSS file যুক্ত করা -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <header class="navbar">
+        <nav class="container nav-inner">
+
+            <!-- Website logo -->
+            <a href="index.html" class="logo">
+                Chandon<span>.</span>
+            </a>
+
+            <!-- অন্য পেজে যাওয়ার menu -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact Me</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+
+        <!-- Hero section: পরিচয় ও introduction -->
+        <section class="container hero">
+
+            <!-- Introduction text -->
+            <div>
+                <span class="eyebrow">WELCOME TO MY PORTFOLIO</span>
+
+                <h1>
+                    Hello, I'm<br>
+                    <span>Chandon Kumar Sarker</span>
+                </h1>
+
+                <p>
+                    I'm a CSE student and aspiring Full-Stack Developer.
+                    I love building clean, useful and user-friendly
+                    websites while learning new technologies.
+                </p>
+
+                <!-- Hero section-এর দুটি button -->
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        Explore My Work →
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero image -->
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=85"
+                    alt="Workspace with laptop"
+                    class="hero-image">
+            </div>
+
+        </section>
+
+        <!-- ========== SERVICES SECTION ========== -->
+        <section class="section section-white">
+            <div class="container">
+
+                <!-- Section heading -->
+                <div class="section-heading">
+                    <h2>What I Do</h2>
+                    <p>My interests and areas of learning.</p>
+                </div>
+
+                <!-- তিনটি service card -->
+                <div class="grid-3">
+
+                    <!-- Web development card -->
+                    <article class="card">
+                        <div class="card-icon">⌘</div>
+                        <h3>Web Development</h3>
+                        <p>
+                            Learning to create responsive websites
+                            using HTML, CSS and JavaScript.
+                        </p>
+                    </article>
+
+                    <!-- Programming card -->
+                    <article class="card">
+                        <div class="card-icon">⌨</div>
+                        <h3>Programming</h3>
+                        <p>
+                            Practicing programming fundamentals,
+                            problem-solving and data structures.
+                        </p>
+                    </article>
+
+                    <!-- Learning card -->
+                    <article class="card">
+                        <div class="card-icon">✦</div>
+                        <h3>Continuous Learning</h3>
+                        <p>
+                            Exploring new technologies and building
+                            projects to improve my skills.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FEATURED PROJECTS ========== -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Featured Projects</h2>
+                    <p>A few projects from my learning journey.</p>
+                </div>
+
+                <div class="grid-3">
+
+                    <!-- Portfolio project -->
+                    <article class="card">
+                        <h3>Personal Portfolio</h3>
+                        <p>A website to showcase my profile and skills.</p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a href="projects.html" class="text-link">
+                            View Projects →
+                        </a>
+                    </article>
+
+                    <!-- Student management project -->
+                    <article class="card">
+                        <h3>Student Management</h3>
+                        <p>A project concept for managing student records.</p>
+
+                        <div class="project-tags">
+                            <span>Programming</span>
+                            <span>Database</span>
+                        </div>
+
+                        <a href="projects.html" class="text-link">
+                            View Projects →
+                        </a>
+                    </article>
+
+                    <!-- JavaScript project -->
+                    <article class="card">
+                        <h3>JavaScript Practice</h3>
+                        <p>Small exercises to improve my coding logic.</p>
+
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>DOM</span>
+                        </div>
+
+                        <a href="projects.html" class="text-link">
+                            View Projects →
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- About page-এর link -->
+                <div style="text-align: center; margin-top: 32px;">
+                    <a href="about.html" class="btn btn-primary">
+                        More About Me →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Chandon Kumar Sarker. Built with HTML & CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

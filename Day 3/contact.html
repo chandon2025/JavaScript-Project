@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Chandon</title>
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <nav class="container nav-inner">
+
+            <a href="index.html" class="logo">Chandon<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li>
+                    <a href="contact.html" class="nav-contact active">
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact page heading -->
+        <section class="container page-header">
+            <span class="eyebrow">LET'S CONNECT</span>
+            <h1>Get In Touch</h1>
+            <p>Have an idea or opportunity? Feel free to contact me.</p>
+        </section>
+
+        <!-- Contact details and form -->
+        <section class="section">
+            <div class="container contact-layout">
+
+                <!-- Contact information -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+
+                    <p>
+                        I'm open to learning opportunities,
+                        collaborations and interesting development projects.
+                    </p>
+
+                    <!-- Email link: নিজের email বসাবে -->
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a class="text-link"
+                           href="mailto:yourname@example.com">
+                            yourname@example.com
+                        </a>
+                    </p>
+
+                    <!-- GitHub profile link -->
+                    <p>
+                        <strong>GitHub:</strong><br>
+                        <a class="text-link"
+                           href="https://github.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visit GitHub →
+                        </a>
+                    </p>
+
+                    <!-- LinkedIn profile link -->
+                    <p>
+                        <strong>LinkedIn:</strong><br>
+                        <a class="text-link"
+                           href="https://www.linkedin.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visit LinkedIn →
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Contact form -->
+                <!-- Form submission-এর জন্য backend/service লাগবে -->
+                <form class="contact-form" action="#" method="post">
+
+                    <h2 style="margin-bottom: 22px;">
+                        Send a Message
+                    </h2>
+
+                    <!-- Name input -->
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                    <!-- Email input -->
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+                    <!-- Subject input -->
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Message subject"
+                        required>
+
+                    <!-- Message textarea -->
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message..."
+                        required></textarea>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary">
+                        Send Message →
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Chandon Kumar Sarker. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
