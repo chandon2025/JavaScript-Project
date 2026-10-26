@@ -1,0 +1,120 @@
+* {
+    margin: 0;padding: 0; box-sizing: border-box; font-family: system-ui, sans-serif;
+}
+body{
+    background: #f5f7fb; color: #1a1a2e;
+}
+.hero {background: linear-gradient(135deg,#4a7cff),#8a5cff;
+color: #fff;padding: 24px 20px 60px;
+}
+.hero nav {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 40px;
+}
+.logo {
+    font-weight: 800; font-size: 18px;
+}
+.hero a{
+    color: #fff;
+    text-decoration: none;
+    border:1px solid rgba(255,255,255,0.5);
+    padding: 6px 14px;
+    border-radius:20px ;
+    background: black;
+}
+.hero h1 {
+    font-size: 36px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero p{
+    text-align: center;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+.card {
+  max-width: 480px;
+  margin: -30px auto 30px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 26px;
+}
+
+.card h2 {
+  margin-bottom: 14px;
+}
+
+#mark {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #d0d5dd;
+}
+
+#btn {
+  width: 100%;
+  padding: 12px;
+  background: #4a7cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background: #3a6cef;
+}
+
+.result {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  display: none;
+}
+
+.result.pass {
+  background: #e6fff2;
+  color: #0a7f3f;
+  display: block;
+}
+
+.result.fail {
+  background: #ffebe6;
+  color: #b00020;
+  display: block;
+}
+
+.tips {
+  max-width: 480px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.tips ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.tips li {
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 13px;
+}
