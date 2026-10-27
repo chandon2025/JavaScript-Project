@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhaka Diner - Tip CalCulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="brand">Dhaka Dinar</div>
+        <h1>Easy bill split</h1>
+        <p>Bill amout, tip % select than show total money</p>
+    </header>
+
+    <main class="calc">
+        <label>Bill(TK)
+            <input id="bill" type="number" min="0"placeholder="1200"/>
+        </label>
+        <label>Tip %
+            <div class="pct-row">
+                <button class="pct" data-p="5">5%</button>
+                <button class="pct" data-p="10">10%</button>
+                <button class="pct" data-p="15">15%</button>
+                <button class="pct" data-p="20">20%</button>
+            </div>
+        </label>
+        <label>Prople
+            <input id="prople" type="number" min="1" value="1"/>
+        </label>
+        <div id="out" class="out">
+            <div class="row"><span>Tip</span><b id="tip">TK0</b></div>
+            <div class="row"><span>Total</span><b id="total">TK0</b></div>
+            <div class="row big"><span>Per person</span><b id="each">TK0</b></div>
+        </div>
+    </main>
+    <footer>@ Dhaka Diner 2026</footer>
+    <script src="app.js"></script>
+</body>
+</html>
