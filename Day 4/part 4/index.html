@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tendy Fashion Store</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header class="hero">
+        <nav><b>Tendy</b><span>Winter sale - 10% off</span></nav>
+        <h1>New collection</h1>
+        <p>Shirt, pants, Shoes - Everything on this point</p>
+    </header>
+
+    <section class="filters">
+        <button data-f="all" class="f active">All</button>
+        <button data-f="shirt" class="f">Shirts</button>
+        <button data-f="pants" class="f">Pants</button>
+        <button data-f="shoes" class="f">Shoes</button>
+        <lable class="in-stock"><input id="stock" type="checkbox"checked/>In Stock only</lable>
+    </section>
+
+    <main id="grid" class="grid"></main>
+
+    <aside class="summary">
+        <div>items: <b id="count">0</b></div>
+        <div>Discount total: <b id="total">0tk</b></div>
+    </aside>
+    <footer>Tendy 2026</footer>
+</body>
+</html>
