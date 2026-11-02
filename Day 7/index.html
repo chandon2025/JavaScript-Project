@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusAssist — University Helping Hand</title>
+  
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ন্যাভিগেশন বার -->
+  <header class="navbar-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <div class="logo-badge">
+            <img src="i.jpg"alt="unversity logo" height="40px";>
+          </div>
+          <div>Pundra<span>University</span></div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#vault" class="nav-link">Academic Vault</a></li>
+          <li><a href="#mentors" class="nav-link">Mentors</a></li>
+          <li><a href="#notices" class="nav-link">Notice Board</a></li>
+          <li>
+            <button class="btn-portal-nav" onclick="openPortalModal()">
+              <i class="fa-solid fa-user-lock"></i> Student Portal
+            </button>
+          </li>
+        </ul>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- হিরো সেকশন -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-tag">
+          <i class="fa-solid fa-hand-holding-hand"></i> Student-to-Student Helping Hub
+        </div>
+        <h1 class="hero-title">
+          Your Complete Academic &amp; <span>Campus Lifeline</span>
+        </h1>
+        <p class="hero-subtitle">
+          Access high-grade lecture summaries, previous semester solutions, senior mentorship sessions, and vital campus desks—all in one place.
+        </p>
+
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by course code, topic, or subject (e.g. CSE110, Calculus)...">
+          <button type="button" class="btn-search" onclick="handleSearch()">Search Vault</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- একাডেমিক ভল্ট সেকশন -->
+  <section class="section-spacing" id="vault">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Verified Resources</span>
+        <h2 class="section-title">Academic Vault</h2>
+        <p class="section-desc">Handpicked lecture notes and past semester solved question sets shared by high-achieving students.</p>
+      </div>
+
+      <div class="three-grid">
+        <!-- কার্ড ১ -->
+        <div class="vault-card">
+          <div>
+            <div class="vault-meta">
+              <span class="dept-badge">CSE Dept</span>
+              <span class="type-badge">Handwritten Notes</span>
+            </div>
+            <h3 class="vault-title">Data Structures &amp; Algorithms</h3>
+            <p class="vault-desc">Complete lecture summaries covering trees, graphs, sorting complexities, and solved midterm quizzes.</p>
+          </div>
+          <div class="vault-footer">
+            <span>48 Pages • PDF</span>
+            <button class="download-action" onclick="downloadResource('Data Structures & Algorithms')">
+              <i class="fa-solid fa-download"></i> Download
+            </button>
+          </div>
+        </div>
+
+        <!-- কার্ড ২ -->
+        <div class="vault-card">
+          <div>
+            <div class="vault-meta">
+              <span class="dept-badge">EEE Dept</span>
+              <span class="type-badge">Lab Manual &amp; Viva</span>
+            </div>
+            <h3 class="vault-title">Basic Electronics &amp; Circuits</h3>
+            <p class="vault-desc">Circuit diagram analysis, diode/transistor lab reports, formula sheets, and common viva questions.</p>
+          </div>
+          <div class="vault-footer">
+            <span>34 Pages • PDF</span>
+            <button class="download-action" onclick="downloadResource('Basic Electronics & Circuits')">
+              <i class="fa-solid fa-download"></i> Download
+            </button>
+          </div>
+        </div>
+
+        <!-- কার্ড ৩ -->
+        <div class="vault-card">
+          <div>
+            <div class="vault-meta">
+              <span class="dept-badge">General Science</span>
+              <span class="type-badge">Exam Solutions</span>
+            </div>
+            <h3 class="vault-title">Differential Calculus &amp; Matrices</h3>
+            <p class="vault-desc">Step-by-step solutions of the last 4 years' final term examination questions with essential formulas.</p>
+          </div>
+          <div class="vault-footer">
+            <span>52 Pages • PDF</span>
+            <button class="download-action" onclick="downloadResource('Differential Calculus & Matrices')">
+              <i class="fa-solid fa-download"></i> Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- সিনিয়র মেন্টরস সেকশন -->
+  <section class="section-spacing section-alt" id="mentors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Peer Guidance</span>
+        <h2 class="section-title">Senior Mentors</h2>
+        <p class="section-desc">Connect directly with experienced senior students for course guidance and exam preparation tips.</p>
+      </div>
+
+      <div class="three-grid">
+        <!-- মেন্টর ১ -->
+        <div class="mentor-card">
+          <div class="mentor-avatar">CK</div>
+          <h3 class="mentor-name">Chandon Kumar Sarker</h3>
+          <p class="mentor-dept">Computer Science • Final Year</p>
+          <div class="mentor-specialty">
+            Specialty: Algorithm Analysis, Java OOP, &amp; Debugging
+          </div>
+          <button class="btn-outline" onclick="contactMentor('Areeba Rahman')">
+            <i class="fa-regular fa-paper-plane"></i> Contact Mentor
+          </button>
+        </div>
+
+        <!-- মেন্টর ২ -->
+        <div class="mentor-card">
+          <div class="mentor-avatar">NS</div>
+          <h3 class="mentor-name">Nayem Islam</h3>
+          <p class="mentor-dept">Electrical Engineering • 4th Year</p>
+          <div class="mentor-specialty">
+            Specialty: Signals, Circuit Theory, &amp; MATLAB
+          </div>
+          <button class="btn-outline" onclick="contactMentor('Nayeem Hasan')">
+            <i class="fa-regular fa-paper-plane"></i> Contact Mentor
+          </button>
+        </div>
+
+        <!-- মেন্টর ৩ -->
+        <div class="mentor-card">
+          <div class="mentor-avatar">TA</div>
+          <h3 class="mentor-name">Tanvir Ahmed</h3>
+          <p class="mentor-dept">Business Administration • 4th Year</p>
+          <div class="mentor-specialty">
+            Specialty: Corporate Finance, Business Case, &amp; Excel
+          </div>
+          <button class="btn-outline" onclick="contactMentor('Tanvir Ahmed')">
+            <i class="fa-regular fa-paper-plane"></i> Contact Mentor
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- নোটিশ বোর্ড সেকশন -->
+  <section class="section-spacing" id="notices">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Campus Updates</span>
+        <h2 class="section-title">Notice Board</h2>
+        <p class="section-desc">Urgent student announcements, blood donation calls, and lost-and-found items.</p>
+      </div>
+
+      <div class="notice-box">
+        <!-- নোটিশ ১ -->
+        <div class="notice-card alert-danger">
+          <div class="notice-info-group">
+            <div class="notice-icon-badge badge-blood">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="notice-text">
+              <h4>Urgent Blood Needed: B+ (Positive)</h4>
+              <p>Required for a university student relative at City General Hospital. Contact: +880 1700-112233.</p>
+            </div>
+          </div>
+          <button class="notice-btn" onclick="showToast('Connecting to Student Blood Donors Club...')">
+            Respond Now &rarr;
+          </button>
+        </div>
+
+        <!-- নোটিশ ২ -->
+        <div class="notice-card">
+          <div class="notice-info-group">
+            <div class="notice-icon-badge badge-lost">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <div class="notice-text">
+              <h4>Found: Student ID Card &amp; Keychain</h4>
+              <p>Found at Central Library 2nd floor reading hall. Handed over to the library reception security desk.</p>
+            </div>
+          </div>
+          <button class="notice-btn" onclick="showToast('Please visit Library Reception Desk to claim.')">
+            Claim Details &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ফুটার সেকশন -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-badge">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>Campus<span>Assist</span></div>
+          </div>
+          <p>An open, student-led digital initiative dedicated to making university resources and peer support easily accessible to all.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Essential Links</h4>
+          <ul class="footer-links">
+            <li><a href="#vault">Academic Vault</a></li>
+            <li><a href="#mentors">Senior Mentors</a></li>
+            <li><a href="#notices">Campus Notice Board</a></li>
+            <li><a href="javascript:void(0)" onclick="openPortalModal()">Student Portal Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="support-card">
+            <h5><i class="fa-solid fa-headset"></i> 24/7 Student Helpline</h5>
+            <p>Hotline: +880 1800-CAMPUS</p>
+            <h5><i class="fa-solid fa-envelope"></i> Email Support</h5>
+            <p>support@campusassist.edu</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CampusAssist — University Helping Hand. All rights reserved.</div>
+        <div>Designed for Students, by Students</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- স্টুডেন্ট পোর্টাল মোডাল -->
+  <div class="portal-modal-overlay" id="portalModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closePortalModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="logo-badge" style="margin: 0 auto;">
+          <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h3>Student Portal</h3>
+        <p>Sign in to access exam materials and book mentor sessions</p>
+      </div>
+
+      <form id="portalLoginForm" onsubmit="handlePortalSubmit(event)">
+        <div class="form-group">
+          <label for="studentId">Student ID Number</label>
+          <input type="text" id="studentId" placeholder="e.g. 2023-1-60-045" required>
+        </div>
+        <div class="form-group">
+          <label for="studentPass">Password</label>
+          <input type="password" id="studentPass" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-full">
+          Sign In to Portal
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- টোস্ট নোটিফিকেশন -->
+  <div class="toast-box" id="toastBox">
+    <i class="fa-solid fa-circle-check" style="color: #93C5FD;"></i>
+    <span id="toastMsg">Operation successful!</span>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
