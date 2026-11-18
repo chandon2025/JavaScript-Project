@@ -134,3 +134,9 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## GitHub Pages deployment
+
+The repository's GitHub Actions workflow builds and deploys this frontend from `day 12/frontend` when frontend files are pushed to `main`. Enable **GitHub Actions** as the Pages build and deployment source in the repository's Pages settings.
+
+GitHub Pages hosts only the static frontend. To enable sign-in and transaction features, deploy the Express backend and PostgreSQL database separately, then set the repository Actions variable `DAY12_API_URL` to the backend API base URL (including `/api`). Configure the backend CORS origin to allow the GitHub Pages site. Without that variable and a reachable backend, the frontend can load but API-backed features will not work.
